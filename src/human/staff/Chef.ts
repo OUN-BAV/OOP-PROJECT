@@ -1,3 +1,4 @@
+import { Gender } from "../gender_and_skill/Gender";
 import { Skill } from "../gender_and_skill/Skill";
 import { Staff } from "./Staff";
 
@@ -6,10 +7,8 @@ import { Staff } from "./Staff";
  * and a chef has a skill
  */
 export class Chef extends Staff {
-    protected skill : Skill;
 
-    constructor(name: string, phone:string,salary:number, skill: Skill) {
-        super(name, phone,salary);
-        this.skill = skill;  
+    constructor(name: string, phone:string,salary:number,gender:Gender, skill: Skill,) {
+        super(name, phone,salary,gender, skill); 
     } 
 }
