@@ -6,10 +6,10 @@ import{Menu} from "./menu/Menu";
  * menu and order
  */
 export class Table {
-    protected table_id: number;
-    protected number_of_chair: number;
+    private table_id: number;
+    private number_of_chair: number;
     protected menu: Menu;
-    protected chair: Chair [] = [];
+    private chairs: Chair [] = [];
 
     constructor(table_id: number, number_of_chair: number,menu:Menu){
         this.table_id = table_id;
@@ -18,8 +18,13 @@ export class Table {
     }
 
     addChair(chair: Chair){
-        if(this.chair.length < this.number_of_chair){
-            this.chair.push(chair);
+        if(this.chairs.length < this.number_of_chair){
+            this.chairs.push(chair);
         }
     }
+    getChair(){
+        return this.chairs;
+    }
+
+
 }
