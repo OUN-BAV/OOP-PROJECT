@@ -1,5 +1,5 @@
-import { Gender } from "../gender_and_skill/Gender";
-import { Skill } from "../gender_and_skill/Skill";
+import { Gender } from "../gender_and_stuffCotegory/Gender";
+import { StuffCotegory } from "../gender_and_stuffCotegory/stuffCategory";
 import { Staff } from "./Staff";
 
 /**
@@ -7,8 +7,10 @@ import { Staff } from "./Staff";
  * and a chef has a skill
  */
 export class Chef extends Staff {
-
-    constructor(name: string, phone:string,salary:number,gender:Gender, skill: Skill,) {
-        super(name, phone,salary,gender, skill); 
+    constructor(name: string, phone:string,salary:number,gender:Gender, ) {
+        super(name, phone,salary,gender, StuffCotegory.COOK); 
     } 
+    getSalary(){
+        return this.salary;
+    }
 }

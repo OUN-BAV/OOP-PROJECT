@@ -1,5 +1,7 @@
-import { Gender } from "./gender_and_skill/Gender";
-
+import { Gender } from "./gender_and_stuffCotegory/Gender";
+/**
+ * person contains name,phone,gender
+ */
 export abstract class Person{
     protected name: string;
     protected phone: string;

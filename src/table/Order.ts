@@ -9,4 +9,10 @@ export class Order{
     addFood(food: Food){
         this.Foods.push(food);
     }
+    getTotalPrice(){
+        let totalPrice : number = 0;
+        for(let food of this.Foods){
+           totalPrice += food.getPrice();
+        }
+    }
 }

@@ -1,5 +1,5 @@
-import { Gender } from "../gender_and_skill/Gender";
-import { Skill } from "../gender_and_skill/Skill";
+import { Gender } from "../gender_and_stuffCotegory/Gender";
+import { StuffCotegory } from "../gender_and_stuffCotegory/stuffCategory";
 import { Person } from "../persons";
 
 /**
@@ -7,10 +7,11 @@ import { Person } from "../persons";
  */
 export abstract class Staff extends Person{
     protected salary: number;
-    protected skill: Skill;
-    constructor(name: string, phone:string,salary:number,gender:Gender,skill:Skill){
+    protected skill: StuffCotegory;
+    constructor(name: string, phone:string,salary:number,gender:Gender,skill:StuffCotegory){
         super(name, phone,gender);
         this.salary = salary;
         this.skill = skill;  
     }
+ 
 }
