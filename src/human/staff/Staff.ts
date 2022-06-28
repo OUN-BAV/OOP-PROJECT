@@ -13,5 +13,4 @@ export abstract class Staff extends Person{
         this.salary = salary;
         this.skill = skill;  
     }
- 
 }

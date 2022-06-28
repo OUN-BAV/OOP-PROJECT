@@ -7,8 +7,7 @@ import { Staff } from "./Staff";
  */
 
 export class Accounter extends Staff{
-    constructor(
-        name: string, phone:string,salary:number,gender:Gender) {
+    constructor(name: string, phone:string,salary:number,gender:Gender) {
         super(name, phone,salary,gender,StuffCotegory.CHARGE ); 
     }
 }
