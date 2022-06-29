@@ -4,7 +4,7 @@ import { Staff } from "./Staff";
 
 /**
  *  a chef is a staff 
- * and a chef has a skill
+ * and stuffCotegory 
  */
 export class Chef extends Staff {
     constructor(name: string, phone:string,salary:number,gender:Gender, ) {

@@ -4,13 +4,11 @@ import { Drink } from "./menu/Drink";
 import { Food } from "./menu/Food";
 
 export class Order{
-    public customer: Customer;
-    constructor(private drinks : Drink[] = [], 
-        private Foods : Food[] = [],
+    private drinks : Drink[] = [];
+    private Foods : Food[] = [];
+    customer: Customer;
+    constructor(
         public orderDate : DateTime){};
-    setCustomer(customer: Customer){
-        this.customer = customer;
-    }
     addDrink(drink: Drink){
         this.drinks.push(drink);
     }

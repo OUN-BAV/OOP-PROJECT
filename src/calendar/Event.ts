@@ -5,7 +5,9 @@ export enum EvenCategory{
     WEEKEND = 'Weekend',
     INTERNATIONALCEREMONY = 'International Ceremony'
 }
-
+/**
+ * 
+ */
 export abstract class Event {
     constructor(protected dayStart : DateTime,protected dayEnd : DateTime,protected category :EvenCategory) {};
     getCategory(){

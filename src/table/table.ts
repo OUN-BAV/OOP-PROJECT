@@ -1,8 +1,7 @@
 import { Customer } from "../human/customer";
 
 /**
- * On table contain Id of table, number of chair
- * menu and order
+ * On table contain Id and customer
  */
 export class Table {
     private table_id: number;

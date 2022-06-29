@@ -1,14 +1,19 @@
+import { DateTime } from "../calendar/DateTime";
 import { Customer } from "../human/customer";
-import { Order } from "../table/Order";
-
-export class Orderlist {
-    constructor ( protected orders : Order[] = []){};
-    priceForPay(customer: Customer):number{
+/**
+ * a pay contains a customer and pay date
+ */
+export class Pay {
+    customer: Customer;
+    payDate:DateTime;
+    constructor(customer:Customer,payDate:DateTime) {
+        this.customer = customer;
+        this.payDate = payDate;
+    }
+    priceForPay():number{
         let amount : number = 0;
-        for(let order of this.orders){
-            if (order.customer=== customer){
+        for(let order of this.customer.getOrder() ){ 
                 amount += order.getAllPrice();
-            }
         }
         return amount;
     }

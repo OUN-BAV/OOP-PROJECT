@@ -1,14 +1,17 @@
-import { ItemToBuy } from "./menuTobuy";
+import { Item } from "./menuTobuy";
 
+/**
+ * a stock contains name address and many items
+ */
 export class Stock{
     protected name : string;
     protected address : string;
-    protected items : ItemToBuy[]=[];
-    constructor(name : string, address : string, items : ItemToBuy){
+    protected items : Item[]=[];
+    constructor(name : string, address : string){
         this.name = name;
         this.address = address;
     }
-    addItem(item : ItemToBuy){
+    addItem(item : Item){
         this.items.push(item);
     }
     findTotalPrice(){

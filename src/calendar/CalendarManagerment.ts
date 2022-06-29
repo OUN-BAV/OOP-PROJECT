@@ -1,5 +1,4 @@
 import { EvenCategory, Event } from "./Event";
-
 /**
  * in a claendar have many events
  */

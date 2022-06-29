@@ -1,6 +1,6 @@
 import { Table } from "./table";
 
-export class Room {
+export class ManageTable {
     public tables: Table[]=[];
 
     getNumberOfTable(){
