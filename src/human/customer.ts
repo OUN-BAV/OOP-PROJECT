@@ -10,10 +10,10 @@ export class Customer extends Person{
     constructor(name: string, phone:string,gender:Gender){
         super(name, phone, gender);
     }
-    addOrder(order: Order){
-        this.orders.push(order);
-    }
     getOrder(){
         return this.orders;
     }
+    addOrder(newOrder:Order){
+        this.orders.push(newOrder);
+    }   
 }

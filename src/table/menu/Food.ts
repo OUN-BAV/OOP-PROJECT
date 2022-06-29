@@ -1,7 +1,4 @@
-
-
-
-
+import {  MenuItem } from "./Item";
 
 export enum FoodCategory{
     SEA_FOOD = 'Sea Food',
@@ -9,14 +6,17 @@ export enum FoodCategory{
     FRANCE_FOOD = 'France Food',
 }
 
-export class Food{
-    protected name: FoodCategory;
-    protected price: number;
-    constructor(name: FoodCategory, price: number){
-        this.name = name;
-        this.price = price;
+export class Food extends MenuItem {
+    constructor(name: string, 
+        price: number,
+        category: FoodCategory)
+    {
+        super(name,price,category);
     }
-    getPrice():number {
+    getPrice(): number {
         return this.price;
+    }
+    getName(): string {
+        return this.name;
     }
 }

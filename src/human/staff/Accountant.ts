@@ -6,8 +6,9 @@ import { Staff } from "./Staff";
  * accounting is a staff 
  */
 
-export class Accounter extends Staff{
-    constructor(name: string, phone:string,salary:number,gender:Gender) {
+export class Accountant extends Staff{
+    constructor(
+        name: string, phone:string,salary:number,gender:Gender) {
         super(name, phone,salary,gender,StuffCotegory.CHARGE ); 
     }
 }

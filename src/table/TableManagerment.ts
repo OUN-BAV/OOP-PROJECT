@@ -9,15 +9,6 @@ export class Room {
     addTable(table: Table){
         this.tables.push(table);
     }
-    findFreeTable():Table|undefined{
-        for(let table of this.tables){
-            for(let chair of table.getChair()){
-                if(! chair.hasCustomer()){
-                    return table;
-                }
-            }
-        }
-        return undefined;
-    }
+    
 }
 
