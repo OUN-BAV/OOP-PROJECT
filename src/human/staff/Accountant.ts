@@ -9,6 +9,9 @@ import { Staff } from "./Staff";
 export class Accountant extends Staff{
     constructor(
         name: string, phone:string,salary:number,gender:Gender) {
-        super(name, phone,salary,gender,StuffCotegory.CHARGE ); 
-    }
+            super(name, phone,salary,gender,StuffCotegory.CHARGE ); 
+        }
+        getSalary(): number {
+            return this.salary;
+        }
 }
