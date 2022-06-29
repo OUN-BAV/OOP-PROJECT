@@ -11,4 +11,6 @@ export class Accountant extends Staff{
         name: string, phone:string,salary:number,gender:Gender) {
         super(name, phone,salary,gender,StuffCotegory.CHARGE ); 
     }
+
+  
 }
